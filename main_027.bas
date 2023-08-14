@@ -79,7 +79,7 @@ PROCEDURE readWagonMovement
 			IF ( ( x + wagonSpeedX ) <= maxWagonX ) THEN
 				dx = wagonSpeedX
 			ELSE IF ( (actualPageX+1) < maxPageX ) THEN
-				x = minWagonX - 1
+				x = minWagonX
 				INC actualPageX
 			ENDIF
 		ELSE IF left THEN
@@ -93,7 +93,7 @@ PROCEDURE readWagonMovement
 			IF ( ( y + wagonSpeedY ) < maxWagonY ) THEN
 				dy = wagonSpeedY
 			ELSE IF ( (actualPageY+1) < maxPageY ) THEN
-				y = minWagonY - 1
+				y = minWagonY
 				INC actualPageY		
 			ENDIF
 		ELSE IF up THEN
@@ -209,6 +209,8 @@ DO
 	readWagonMovement[]
 
 LOOP
+
+
 
 
 
